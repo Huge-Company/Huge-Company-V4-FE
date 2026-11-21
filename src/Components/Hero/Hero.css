@@ -1,0 +1,183 @@
+.Hero {
+  display: grid;
+  width: 100%;
+  min-height: 450px;
+  box-sizing: border-box;
+  place-items: center;
+  padding: 40px 24px;
+  background: linear-gradient(112deg, var(--brand-blue-hero) 0%, var(--brand-blue-glow) 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  width: min(100%, 1280px);
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-accent {
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin-bottom: 22px;
+  border-radius: 99px;
+  background: var(--brand-yellow);
+  transform: scaleX(0.25);
+  animation: hero-accent-open 520ms cubic-bezier(0.2, 0.75, 0.25, 1) 120ms forwards;
+}
+
+@keyframes hero-accent-open {
+  to { transform: scaleX(1); }
+}
+
+.S1 {
+  display: grid;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 2.3em;
+  place-items: center;
+  margin: 0;
+  color: #fff;
+  font-family: var(--effra, 'Effra', sans-serif);
+  font-size: clamp(40px, 4.45vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  text-align: center;
+}
+
+.hero-cycle-text {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.S1 .hero-title-highlight {
+  color: var(--brand-yellow);
+}
+
+.hero-type-cursor {
+  display: inline-block;
+  width: 0.065em;
+  height: 0.78em;
+  margin-left: 0.08em;
+  background: var(--brand-yellow);
+  vertical-align: -0.08em;
+  animation: hero-caret 900ms step-end infinite;
+}
+
+@keyframes hero-caret {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.buttons-pc {
+  display: flex;
+  width: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+  padding: 0;
+}
+
+.buttons-pc .Define,
+.buttons-pc .VEY-button {
+  display: inline-flex;
+  min-width: 148px;
+  min-height: 48px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border: 1px solid rgb(255 255 255 / 32%);
+  border-radius: 6px;
+  font-family: var(--effra, 'Effra', sans-serif);
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.buttons-pc .Define {
+  border-color: var(--brand-yellow);
+  background: var(--brand-yellow);
+  color: var(--brand-blue-hero);
+}
+
+.buttons-pc .VEY-button {
+  background: transparent;
+  color: #fff;
+}
+
+.buttons-pc .Define:hover,
+.buttons-pc .VEY-button:hover {
+  transform: translateY(-2px);
+}
+
+.buttons-pc .VEY-button:hover {
+  border-color: var(--brand-yellow);
+  background: rgb(245 202 91 / 12%);
+}
+
+.buttons-pc a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-accent {
+    transform: none;
+    animation: none;
+  }
+
+  .hero-type-cursor {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .Hero {
+    min-height: 300px;
+    padding: 36px 20px;
+  }
+
+  .S1 {
+    min-height: 2.4em;
+    font-size: clamp(34px, 8vw, 46px);
+  }
+
+  .buttons-pc {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .buttons-pc .Define,
+  .buttons-pc .VEY-button {
+    min-width: 0;
+    flex: 1 1 130px;
+    padding-inline: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Hero {
+    padding-inline: clamp(48px, 6vw, 112px);
+  }
+
+  .hero-content {
+    width: min(100%, 1280px);
+  }
+
+  .S1 {
+    min-height: 2.3em;
+  }
+
+  .buttons-pc {
+    align-self: center;
+  }
+}

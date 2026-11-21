@@ -1,0 +1,9 @@
+.page-callout { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: min(1320px, calc(100% - clamp(40px, 8vw, 128px))); margin: 48px auto 76px; padding: clamp(24px, 4.5vw, 44px); border: 2px solid var(--brand-yellow); border-radius: 20px; background: linear-gradient(115deg, var(--brand-blue-deep) 0%, var(--brand-blue) 100%); color: #fff; font-family: var(--effra, 'Effra', sans-serif); }
+.page-callout > div > span { color: var(--brand-yellow); font-size: 12px; font-weight: 700; letter-spacing: .14em; }
+.page-callout h2 { margin: 10px 0 0; font-size: clamp(25px, 3vw, 38px); font-weight: 600; letter-spacing: -.035em; }
+.page-callout a { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 10px; padding: 0 18px; border: 1px solid var(--brand-yellow); border-radius: 10px; background: var(--brand-yellow); color: var(--brand-blue-deep); font-size: 14px; font-weight: 700; text-align: center; white-space: nowrap; transition: transform 180ms ease, background 180ms ease; }
+.page-callout a svg { transition: transform 180ms ease; }
+.page-callout a:hover { transform: translateY(-2px); border-color: #f5d66a; background: #f5d66a; }
+.page-callout a:hover svg { transform: translateX(4px); }
+@media (max-width: 600px) { .page-callout { align-items: flex-start; flex-direction: column; width: calc(100% - 36px); margin: 36px auto 56px; border-radius: 16px; } }
+@media (prefers-reduced-motion: reduce) { .page-callout a, .page-callout a svg { transition: none; } }

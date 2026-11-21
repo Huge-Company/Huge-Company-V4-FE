@@ -1,0 +1,4 @@
+.social-bar { display: flex; width: 100%; height: 34px; justify-content: center; padding-inline: clamp(20px, 4vw, 72px); background: #fff; }
+.social-links { display: flex; width: min(100%, 1320px); align-items: center; justify-content: flex-end; gap: 12px; margin: 0; padding: 0; color: var(--brand-blue); font-size: 16px; list-style: none; }
+@media (max-width: 980px) { .social-bar { justify-content: center; } .social-links { justify-content: center; } }
+@media (max-width: 420px) { .social-bar { height: 30px; } .social-links { gap: 10px; font-size: 15px; } }

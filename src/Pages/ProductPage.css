@@ -1,0 +1,6 @@
+.products-page { font-family: var(--effra, 'Effra', sans-serif); }
+.products-page__intro { width: min(1320px, calc(100% - clamp(40px, 8vw, 128px))); margin: 0 auto; padding: clamp(52px, 7vw, 90px) 0 20px; }
+.products-page__intro > span { color: var(--brand-muted); font-size: 12px; font-weight: 700; letter-spacing: .15em; }
+.products-page__intro h1 { max-width: 760px; margin: 15px 0 10px; color: var(--brand-blue); font-size: clamp(38px, 5vw, 64px); font-weight: 600; letter-spacing: -.045em; line-height: 1.04; }
+.products-page__intro p { max-width: 700px; color: var(--brand-muted); font-size: clamp(17px, 1.65vw, 21px); line-height: 1.5; }
+.products-page .product-showcases { padding-top: 16px; }

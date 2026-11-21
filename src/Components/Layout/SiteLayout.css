@@ -1,0 +1,17 @@
+.site-layout {
+  min-height: 100vh;
+  background: #fff;
+  color: var(--brand-ink);
+  font-family: var(--effra, 'Effra', sans-serif);
+}
+
+.site-layout main { animation: page-appear 420ms ease both; }
+
+@keyframes page-appear {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-layout main { animation: none; }
+}

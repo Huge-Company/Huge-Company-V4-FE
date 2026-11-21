@@ -1,0 +1,27 @@
+.information-page { width: min(1320px, calc(100% - clamp(40px, 10vw, 144px))); margin: 0 auto; padding: clamp(58px, 8vw, 108px) 0 24px; font-family: var(--effra, 'Effra', sans-serif); }
+.information-hero { position: relative; overflow: hidden; padding: clamp(34px, 6vw, 72px); border: 1px solid var(--brand-line); border-radius: 24px; background: radial-gradient(ellipse at 88% 10%, rgb(60 87 151 / 14%), transparent 40%), linear-gradient(135deg, var(--brand-card), #fff 76%); }
+.information-hero__label { color: var(--brand-muted); font-size: 12px; font-weight: 700; letter-spacing: .16em; }
+.information-hero h1 { max-width: 900px; margin: 18px 0 14px; color: var(--brand-blue); font-size: clamp(42px, 6vw, 76px); font-weight: 600; letter-spacing: -.05em; line-height: 1.02; }
+.information-hero > p { max-width: 720px; color: var(--brand-muted); font-size: clamp(17px, 1.7vw, 21px); line-height: 1.55; }
+.information-hero__rule { display: block; width: 150px; height: 8px; margin-top: 24px; border-radius: 99px; background: var(--brand-yellow); }
+.information-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding: 24px 0 68px; }
+.information-grid--platform { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.about-manifesto { display: flex; align-items: baseline; gap: clamp(18px, 4vw, 56px); margin: 26px 0 0; padding: 26px 0 0; border-top: 1px solid var(--brand-line); }
+.about-manifesto > span { flex: 0 0 auto; color: var(--brand-muted); font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+.about-manifesto > p { margin: 0; color: var(--brand-blue); font-size: clamp(24px, 3vw, 38px); letter-spacing: -.035em; line-height: 1.2; }
+.about-manifesto strong { color: var(--brand-blue-glow); font-weight: 500; }
+.information-card { min-height: 240px; padding: 24px; border: 1px solid var(--brand-line); border-radius: 16px; background: linear-gradient(145deg, var(--brand-card), #fff); box-shadow: 0 10px 26px rgb(27 78 155 / 5%); transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease; }
+.information-card:hover { transform: translateY(-4px); border-color: var(--brand-blue-glow); box-shadow: 0 16px 34px rgb(27 78 155 / 10%); }
+.information-card__top { display: flex; align-items: center; justify-content: space-between; color: var(--brand-blue-glow); font-size: 15px; font-weight: 700; letter-spacing: .1em; }
+.information-card__icon { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 50%; background: var(--brand-yellow); color: var(--brand-blue); font-size: 19px; }
+.information-card h2 { margin: 22px 0 8px; color: var(--brand-blue); font-size: 23px; letter-spacing: -.025em; }
+.information-card p { margin: 0; color: var(--brand-muted); font-size: 16px; line-height: 1.55; }
+.information-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 76px; padding: clamp(24px, 4.5vw, 44px); border: 2px solid var(--brand-yellow); border-radius: 18px; background: linear-gradient(115deg, var(--brand-blue-deep) 0%, var(--brand-blue) 100%); color: #fff; }
+.information-cta > div > span { color: var(--brand-yellow); font-size: 12px; font-weight: 700; letter-spacing: .14em; }
+.information-cta h2 { margin: 10px 0 0; font-size: clamp(25px, 3vw, 38px); letter-spacing: -.035em; }
+.information-cta a { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 18px; border: 1px solid var(--brand-yellow); border-radius: 9px; background: var(--brand-yellow); color: var(--brand-blue-deep); font-size: 14px; font-weight: 700; text-align: center; white-space: nowrap; }
+.information-cta a svg { transition: transform 180ms ease; }
+.information-cta a:hover svg { transform: translateX(4px); }
+@media (max-width: 1000px) { .information-grid, .information-grid--platform { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .information-page { padding-top: 40px; } .information-hero { padding: 28px 24px; border-radius: 18px; } .information-grid, .information-grid--platform { grid-template-columns: 1fr; padding-bottom: 48px; } .information-card { min-height: 0; } .about-manifesto { align-items: flex-start; flex-direction: column; gap: 10px; } .information-cta { align-items: start; flex-direction: column; margin-bottom: 56px; } }
+@media (prefers-reduced-motion: reduce) { .information-card, .information-cta a svg { transition: none; } }

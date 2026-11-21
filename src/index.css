@@ -1,0 +1,20 @@
+:root {
+  --brand-blue: #1b4e9b;
+  --brand-blue-mid: #123f9b;
+  --brand-blue-dark: #183f7f;
+  --brand-blue-deep: #17376d;
+  --brand-blue-hero: #24396f;
+  --brand-blue-glow: #3c5797;
+  --brand-yellow: #f5ca5b;
+  --brand-ink: #454545;
+  --brand-muted: #65779c;
+  --brand-gray: #a8a8a9;
+  --brand-surface: #f4f7fb;
+  --brand-card: #f6f8ff;
+  --brand-tint: #e4ebff;
+  --brand-line: #d9e2f2;
+}
+
+a { text-decoration: none; }
+
+p { margin: 0; }

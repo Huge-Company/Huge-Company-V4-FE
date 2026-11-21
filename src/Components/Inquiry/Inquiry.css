@@ -1,0 +1,18 @@
+.inquiry-page { width: min(920px, calc(100% - clamp(40px, 10vw, 144px))); margin: 0 auto; padding: clamp(52px, 7vw, 88px) 0 96px; font-family: var(--effra, 'Effra', sans-serif); }
+.inquiry-intro { margin-bottom: 26px; }
+.inquiry-intro > span { color: var(--brand-muted); font-size: 12px; font-weight: 700; letter-spacing: .16em; }
+.inquiry-intro h1 { margin: 14px 0 8px; color: var(--brand-blue); font-size: clamp(40px, 5.5vw, 64px); font-weight: 600; letter-spacing: -.05em; line-height: 1.04; }
+.inquiry-intro p { color: var(--brand-muted); font-size: clamp(17px, 1.65vw, 20px); line-height: 1.5; }
+.inquiry-panel { display: flex; flex-direction: column; gap: 18px; padding: clamp(24px, 4vw, 40px); border: 1px solid var(--brand-line); border-radius: 18px; background: linear-gradient(145deg, var(--brand-card), #fff 65%); box-shadow: 0 16px 44px rgb(27 78 155 / 8%); }
+.inquiry-field-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.inquiry-field { display: flex; min-width: 0; flex-direction: column; gap: 8px; color: var(--brand-blue); font-size: 14px; font-weight: 600; }
+.inquiry-field input, .inquiry-field select { width: 100%; min-height: 48px; box-sizing: border-box; padding: 0 14px; border: 1px solid var(--brand-line); border-radius: 9px; outline: none; background: #fff; color: var(--brand-ink); font: inherit; font-size: 15px; font-weight: 400; }
+.inquiry-field input::placeholder { color: #8a98af; }
+.inquiry-field input:focus, .inquiry-field select:focus { border-color: var(--brand-blue); box-shadow: 0 0 0 3px rgb(27 78 155 / 11%); }
+.inquiry-submit { min-height: 48px; align-self: flex-start; padding: 0 24px; border: 1px solid var(--brand-blue); border-radius: 9px; background: var(--brand-blue); color: #fff; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; transition: transform 160ms ease, background-color 160ms ease; }
+.inquiry-submit:hover:not(:disabled) { transform: translateY(-2px); background: var(--brand-blue-dark); }
+.inquiry-submit:focus-visible { outline: 3px solid var(--brand-yellow); outline-offset: 3px; }
+.inquiry-submit:disabled { cursor: wait; opacity: .72; }
+.inquiry-error { margin: 0; color: #b52e34; font-size: 14px; }
+@media (max-width: 580px) { .inquiry-page { padding-block: 42px 64px; } .inquiry-field-row { grid-template-columns: 1fr; gap: 18px; } .inquiry-panel { gap: 18px; } }
+@media (prefers-reduced-motion: reduce) { .inquiry-submit { transition: none; } }

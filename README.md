@@ -6,7 +6,7 @@ The V4 website is Huge Company’s React-based web experience. It brings togethe
 
 ### Requirements
 
-- Node.js 20 or later
+- Node.js 20.19+ or 22.12+
 - npm
 
 ### Setup

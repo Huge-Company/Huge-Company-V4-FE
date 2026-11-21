@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a problem with the Huge Company website.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for taking the time to report a problem. Please do not include passwords, personal data, or security vulnerabilities here."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the issue and what you expected to happen.
+      placeholder: A clear summary of the problem.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or URL
+      placeholder: https://example.com/page
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: 1. Open… 2. Select… 3. See the issue…
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser or device
+      options:
+        - Chrome
+        - Edge
+        - Firefox
+        - Safari
+        - Mobile browser
+        - Other
+    validations:
+      required: false
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or additional context
+      description: Add a screenshot or any other context that helps explain the issue.
+    validations:
+      required: false

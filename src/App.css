@@ -64,7 +64,7 @@
   width: 50.2vw;
   background: linear-gradient(115deg, var(--brand-blue-deep) 0%, var(--brand-blue) 100%);
   box-shadow: 0 0 36px rgb(7 26 67 / 18%);
-  animation-duration: 1050ms;
+  animation-duration: 180ms;
   animation-timing-function: cubic-bezier(.76, 0, .24, 1);
   animation-fill-mode: forwards;
 }

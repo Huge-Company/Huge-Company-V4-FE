@@ -91,6 +91,7 @@ function DigiDeskShowcase({ compact = false }) {
     <section className="product-showcase product-showcase--digidesk" aria-labelledby="digidesk-title">
       <div className="product-showcase__header flex items-center justify-between">
         <div className="product-showcase__intro">
+          {!compact && <span className="product-showcase__eyebrow">Product 01 <i /> Document scanning</span>}
           <h2 className="product-showcase__title" id="digidesk-title">
             <span className="digidesk-wordmark"><strong>Digi</strong><span>desk</span></span>
           </h2>
@@ -115,6 +116,7 @@ function ProductSection({ product, compact = false }) {
     <section id="digiline" className="product-showcase product-showcase--digiline" aria-labelledby="digiline-title">
       <div className="product-showcase__header flex items-center justify-between">
         <div className="product-showcase__intro">
+          {!compact && <span className="product-showcase__eyebrow">Product 02 <i /> Online platform</span>}
           <h2 className="product-showcase__title" id="digiline-title">
             <span className="digiline-wordmark"><strong>Digi</strong><span>Line</span></span>
           </h2>
@@ -188,9 +190,6 @@ export default function ProductShowcase({ style = '1' }) {
   return (
     <div className="product-showcases product-showcases--style-1 flex flex-column" aria-label="Our products">
       <DigiDeskShowcase />
-      <div className="product-showcase-divider" role="separator" aria-label="and">
-        <span className="product-showcase-divider-txt flex items-center justify-center">AND</span>
-      </div>
       <ProductSection product={digiLine} />
     </div>
   )

@@ -100,14 +100,6 @@
   padding-bottom: 0;
 }
 
-.home-page .product-showcase-divider {
-  margin-block: 24px;
-}
-
-.home-page .product-showcase-divider-txt {
-  margin: 0;
-}
-
 .home-page .qa-section {
   padding-block: clamp(44px, 5vw, 60px);
 }

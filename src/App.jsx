@@ -4,17 +4,10 @@ import 'tachyons';
 import './App.css';
 import './Fonts.css';
 
-const OPENING_PROGRESS_MS = 2600
-const OPENING_HOLD_MS = 800
+const PAGE_SWAP_MS = 180
 
 function openingLazy(importPage) {
-  const progressDuration = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : OPENING_PROGRESS_MS
-  return lazy(() => Promise.all([
-    importPage(),
-    new Promise((resolve) => window.setTimeout(resolve, progressDuration)),
-  ]).then(([pageModule]) => new Promise((resolve) => {
-    window.setTimeout(() => resolve(pageModule), OPENING_HOLD_MS)
-  })))
+  return lazy(importPage)
 }
 
 const Home = openingLazy(() => import('./Pages/Home'))
@@ -65,7 +58,7 @@ function RouteLoading() {
 
   useEffect(() => {
     const startedAt = performance.now()
-    const duration = OPENING_PROGRESS_MS
+    const duration = PAGE_SWAP_MS
     let frame
     const advance = (now) => {
       const nextProgress = Math.min(100, Math.round(1 + ((now - startedAt) / duration) * 99))
